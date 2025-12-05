@@ -66,12 +66,14 @@ Alle zentralen Angaben liegen **nur** in `src/iotueli_sample/config.py`. Das gil
 1. `.venv` aktivieren: `source .venv/bin/activate`
 2. Provider starten:
    ```bash
-   python provider.py
+   python3 provider.py
    ```
 3. Die Konsole zeigt, ob Registrierung & Events funktionieren (`NATS-Verbindung steht`, `Registry-Status ...`). Sobald `OK`, taucht der Provider im Data Hub auf.  
    Alternative Varianten:
    - `provider_cli.py` → interaktives CLI mit manuellen Updates.
    - `samples/provider_minimal.py` → stark vereinfachter Einstiegscode für eigene Projekte.
+
+![Data Hub Ansicht](doc/IoTUeli-Datahub.gif)
 
 ## 5. Consumer starten (optional)
 
@@ -82,7 +84,7 @@ Alle zentralen Angaben liegen **nur** in `src/iotueli_sample/config.py`. Das gil
    - `list_providers.py` → nutzt Registry-Query, um verfügbare Provider aufzulisten.
 3. Ausführen:
    ```bash
-   python consumer.py
+   python3 consumer.py
    ```
 4. Die Ausgabe zeigt zunächst alle aktuellen Werte und anschließend jede Änderung. Auf einem u-OS-Gerät kannst du so direkt prüfen, ob die Variablen im Data Hub ankommen oder eine (lokale) Consumer-Anwendung schreiben.
 
