@@ -1,6 +1,6 @@
 # IoTUeli Minimal Data Hub Samples
 
-Ordner mit komplett eigenständigen Samples für einen einfachen Provider und optionalen Consumer zum u-OS Data Hub auf dem Gerät `192.168.10.141`.
+Ordner mit komplett eigenständigen Samples für einen einfachen Provider und optionalen Consumer zum u-OS Data Hub auf dem Gerät.
 
 ## 1. Vorbereitungen auf der Steuerung
 
