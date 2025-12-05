@@ -14,6 +14,8 @@ Die Skripte lassen sich sowohl auf einem Entwicklungsrechner als auch direkt auf
    - **Provider** `sampleprovider`: Access `hub.variables` → Rolle **Provide**
    - **Consumer** `sampleconsumer`: Access `hub.variables` → Rolle **ReadWrite** (oder Read)
    - Die zugehörigen Client ID & Secrets notieren.
+
+![Control Center Workflow](doc/IoTUeli-u-OS.gif?raw=true)
 2. **Token-Test**:
    ```bash
    curl -vk -u '<CLIENT_ID>:<CLIENT_SECRET>' \
