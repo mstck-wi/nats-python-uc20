@@ -38,7 +38,8 @@ nats-python/
 **Setup**
 
 ```bash
-cd ~/App/nats-python
+git clone https://github.com/uiff/nats-python-uc20.git
+cd nats-python-uc20
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -47,7 +48,7 @@ pip install -r requirements.txt
 
 > `.venv` bleibt im Projektordner und kapselt alles. Vor jedem Start `source .venv/bin/activate`.
 >
-> Auf der u-OS-Steuerung funktioniert dasselbe: Im Terminal anmelden, ins Projekt wechseln, `.venv` anlegen – danach kannst du Provider/Consumer lokal auf dem Gerät laufen lassen (Host = `127.0.0.1`).
+> Auf der u-OS-Steuerung funktioniert dasselbe: Repository auf das Gerät klonen, im Ordner `nats-python-uc20` arbeiten und wie oben `.venv` anlegen – danach kannst du Provider/Consumer lokal laufen lassen (Host = `127.0.0.1`).
 
 ## 3. Konfiguration anpassen
 
