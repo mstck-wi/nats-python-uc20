@@ -95,8 +95,8 @@ def _def_to_flat(var: VariableDefinitionModel) -> VariableDefinitionT:
     definition = VariableDefinitionT()
     definition.key = var.key
     definition.id = var.id
-    definition.data_type = data_type_map[var.data_type]
-    definition.access_type = access
+    definition.dataType = data_type_map[var.data_type]
+    definition.accessType = access
     definition.experimental = var.experimental
     return definition
 
@@ -141,10 +141,10 @@ def build_provider_definition_event(
     fingerprint = _fingerprint(vars)
     definition = ProviderDefinitionT()
     definition.fingerprint = fingerprint
-    definition.variable_definitions = [_def_to_flat(var) for var in vars]
+    definition.variableDefinitions = [_def_to_flat(var) for var in vars]
 
     event = ProviderDefinitionChangedEventT()
-    event.provider_definition = definition
+    event.providerDefinition = definition
     builder = Builder(1024)
     root = event.Pack(builder)
     builder.Finish(root)
@@ -158,7 +158,7 @@ def build_variables_changed_event(
 ) -> bytes:
     var_list = _build_variable_list(variables, states, fingerprint)
     event = VariablesChangedEventT()
-    event.changed_variables = var_list
+    event.changedVariables = var_list
     builder = Builder(1024)
     root = event.Pack(builder)
     builder.Finish(root)

@@ -11,7 +11,7 @@ Vor jedem Start:
 
 from .models import VariableAccess, VariableDefinitionModel, VariableType
 
-HOST = "192.168.10.108"
+HOST = "192.168.10.100"
 PORT = 49360
 PROVIDER_ID = "sampleprovider"
 PUBLISH_INTERVAL_SECONDS = 1.0
@@ -24,30 +24,6 @@ TOKEN_ENDPOINT = f"https://{HOST}/oauth2/token"
 
 # Keys appear exactly like this inside the u-OS Data Hub tree.
 VARIABLE_DEFINITIONS = [
-    VariableDefinitionModel(
-        1,
-        "digital_nameplate.manufacturer_name",
-        VariableType.STRING,
-        VariableAccess.READ_ONLY,
-    ),
-    VariableDefinitionModel(
-        2,
-        "digital_nameplate.serial_number",
-        VariableType.STRING,
-        VariableAccess.READ_ONLY,
-    ),
-    VariableDefinitionModel(
-        3,
-        "digital_nameplate.year_of_construction",
-        VariableType.INT64,
-        VariableAccess.READ_ONLY,
-    ),
-    VariableDefinitionModel(
-        4,
-        "digital_nameplate.hardware_version",
-        VariableType.STRING,
-        VariableAccess.READ_ONLY,
-    ),
     VariableDefinitionModel(
         5,
         "diagnostics.status_text",

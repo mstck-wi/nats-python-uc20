@@ -167,7 +167,7 @@ class ProviderApp:
         )
 
     async def _handle_registry_update(self, msg) -> None:
-        event = ProviderDefinitionChangedEvent.GetRootAsProviderDefinitionChangedEvent(
+        event = ProviderDefinitionChangedEvent.GetRootAs(
             msg.data, 0
         )
         definition = event.ProviderDefinition()
