@@ -20,7 +20,7 @@ Die Skripte lassen sich sowohl auf einem Entwicklungsrechner als auch direkt auf
    ```bash
    curl -vk -u '<CLIENT_ID>:<CLIENT_SECRET>' \
         -d 'grant_type=client_credentials&scope=hub.variables.provide' \
-        https://192.168.10.141/oauth2/token
+        https://<IP-ODER-HOST>/oauth2/token
    ```
    Erfolgreich ist der Test, wenn ein `access_token` zurückkommt. Für den Consumer analog mit `scope=hub.variables.readwrite` testen.
 
