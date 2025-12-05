@@ -90,6 +90,13 @@ Alle zentralen Angaben liegen **nur** in `src/iotueli_sample/config.py`. Das gil
    ```
 4. Die Ausgabe zeigt zunächst alle aktuellen Werte und anschließend jede Änderung. Auf einem u-OS-Gerät kannst du so direkt prüfen, ob die Variablen im Data Hub ankommen oder eine (lokale) Consumer-Anwendung schreiben.
 
+### Bestehenden Provider (z. B. `u_os_adm`) lesen
+
+1. Führe `python3 list_providers.py` aus, um dir alle Provider anzuzeigen, die die Registry aktuell kennt.
+2. Setze in `src/iotueli_sample/config.py` die Felder `PROVIDER_ID` und `CLIENT_NAME` auf den gewünschten Provider (z. B. `u_os_adm`).  
+   > Wichtig: Der OAuth-Client muss Leserechte (`hub.variables.readonly` oder `hub.variables.readwrite`) besitzen – bei System-Providern genügt es, wenn dein eigener Client diese Rollen hat.
+3. Starte anschließend `python3 consumer.py`. Das Skript fragt über `v1.loc.<PROVIDER_ID>.vars.qry.read` die Variablen ab und lauscht auf deren Events. Die Simulation läuft nur für `sampleprovider`; für echte Provider steuerst du den Wertfluss direkt auf der Steuerung.
+
 ## 6. Troubleshooting
 
 - **401 `invalid_client`** – Client-ID/Secret oder Scope stimmt nicht. Token-Test überprüfen.
