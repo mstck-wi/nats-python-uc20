@@ -5,7 +5,9 @@ from dataclasses import dataclass
 from typing import List
 
 from weidmueller.ucontrol.hub import WriteVariablesCommand
-from weidmueller.ucontrol.hub import ProviderDefinitionChangedEvent
+from weidmueller.ucontrol.hub.ProviderDefinitionChangedEvent import (
+    ProviderDefinitionChangedEvent,
+)
 from weidmueller.ucontrol.hub.Variable import Variable
 from weidmueller.ucontrol.hub.VariableValue import VariableValue
 from weidmueller.ucontrol.hub.VariableValueBoolean import (
